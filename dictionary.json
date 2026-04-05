@@ -1,0 +1,45 @@
+{
+  "system_metadata": {
+    "db_name": "PTIT_Student_Management",
+    "version": "1.0",
+    "tables": [
+      {
+        "table_name": "Student",
+        "storage_type": "Sequential",
+        "file_path": "Student.txt",
+        "delimiter": ",",
+        "columns": [
+          {"column_name": "student_id", "data_type": "VARCHAR", "length": 15, "is_primary_key": true, "has_index": true},
+          {"column_name": "full_name", "data_type": "VARCHAR", "length": 50, "is_primary_key": false, "has_index": false},
+          {"column_name": "class_name", "data_type": "VARCHAR", "length": 20, "is_primary_key": false, "has_index": false},
+          {"column_name": "email", "data_type": "VARCHAR", "length": 50, "is_primary_key": false, "has_index": false},
+          {"column_name": "phone", "data_type": "VARCHAR", "length": 15, "is_primary_key": false, "has_index": false}
+        ]
+      },
+      {
+        "table_name": "Course",
+        "storage_type": "Heap",
+        "file_path": "Course.txt",
+        "delimiter": ",",
+        "columns": [
+          {"column_name": "course_id", "data_type": "VARCHAR", "length": 15, "is_primary_key": true, "has_index": true},
+          {"column_name": "course_name", "data_type": "VARCHAR", "length": 100, "is_primary_key": false, "has_index": false},
+          {"column_name": "credits", "data_type": "INT", "length": 4, "is_primary_key": false, "has_index": false},
+          {"column_name": "dept_name", "data_type": "VARCHAR", "length": 50, "is_primary_key": false, "has_index": false}
+        ]
+      },
+      {
+        "table_name": "Enrollment",
+        "storage_type": "Heap",
+        "file_path": "Enrollment.txt",
+        "delimiter": ",",
+        "columns": [
+          {"column_name": "student_id", "data_type": "VARCHAR", "length": 15, "is_primary_key": true, "has_index": true},
+          {"column_name": "course_id", "data_type": "VARCHAR", "length": 15, "is_primary_key": true, "has_index": true},
+          {"column_name": "semester", "data_type": "VARCHAR", "length": 10, "is_primary_key": false, "has_index": false},
+          {"column_name": "score", "data_type": "FLOAT", "length": 8, "is_primary_key": false, "has_index": false}
+        ]
+      }
+    ]
+  }
+}
